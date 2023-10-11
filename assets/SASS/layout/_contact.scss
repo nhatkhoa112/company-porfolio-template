@@ -1,0 +1,92 @@
+@use "../rules/mixin" as *;
+
+.contact-us {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  .container {
+
+    form {
+      display: flex;
+      justify-content: space-between;
+      .box {
+        flex-basis: 50%;
+
+        input[type=text], input[type=email] {
+          display: block;
+          font-size: 18px;
+          width: 100%;
+          padding: 15px;
+          margin-bottom: 30px;
+          border-radius: 8px;
+          border: 2px solid black;
+          caret-color: var(--mainColor);
+          transition: var(--mainTransition);
+
+          &::placeholder {
+            color: var(--textColor);
+            font-weight: bold;
+            // font-size: 16px;
+          }
+          &:focus {
+            outline: none;
+            border-color: transparent transparent var(--mainColor) transparent;
+            border-radius: 0%;
+          }
+        }
+
+      }
+      .box-sub {
+        flex-basis: 40%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        textarea {
+          display: block;
+          width: 100%;
+          min-height: 150px;
+          max-width: 450px;
+          max-height: 200px;
+          font-size: 18px;
+          border: 2px solid black;
+          border-radius: 8px;
+          caret-color: var(--mainColor);
+          transition: var(--mainTransition);
+          padding: 5px;
+
+          &:focus {
+            outline: none;
+            border-color: transparent transparent var(--mainColor) transparent;
+            border-radius: 0%;
+          }
+
+        }
+        input[type=submit] {
+          outline: none;
+          border: none;
+          padding: 18px 0;
+          margin-top: 20px;
+          border-radius: 25px;
+          background-color: var(--mainColor);
+          font-size: 25px;
+          font-weight: bold;
+          color: white;
+          cursor: pointer;
+          transition: var(--mainTransition);
+          opacity: 0.6;
+          &:hover {
+            background:linear-gradient(to right, var(--mainColor), black 70%);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoints(small) {
+  .contact-us {
+    form {
+      flex-direction: column;
+    }
+  }
+}

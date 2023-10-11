@@ -1,0 +1,77 @@
+@use "../rules/mixin" as *;
+
+.testimonials {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background: linear-gradient(to right, var(--mainColor), var(--mainColor) 50%, black 50%);
+  .main-header {
+    color: white
+  }
+  .container {
+    @include f-between;
+    flex-wrap: wrap;
+    .ts-box {
+      width: calc((100% / 3) - 10px);
+      padding: 20px;
+      margin-bottom: 15px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 8px 0 white;
+      &:hover .info img {
+        transition:
+        border-top-color 0.1s 0.4s,
+        border-right-color 0.1s 0.3s,
+        border-bottom-color 0.1s 0.2s,
+        border-left-color 0.1s 0.1s;
+        border-color: var(--mainColor);
+      }
+      p {
+        color: var(--textColor);
+        line-height: 1.6;
+        margin-bottom: 25px;
+      }
+      .info {
+        @include f-between;
+        img {
+          width: 110px;
+          height: 110px;
+          border-radius: 50%;
+          padding: 5px;
+          border: 5px solid;
+          border-color: white white white white;
+        }
+        .person {
+          width: 100%;
+          margin-left: 10px;
+          h4 {
+            color: var(--mainColor);
+            margin-bottom: 15px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@include breakpoints(medium) {
+  .testimonials {
+    .container {
+      .ts-box {
+        width: calc((100% / 2) - 10px);
+      }
+    }
+  }
+
+}
+@include breakpoints(small) {
+  .testimonials {
+    .container {
+      .ts-box {
+        width: 100%;
+      }
+    }
+  }
+
+}

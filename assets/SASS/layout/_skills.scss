@@ -1,0 +1,80 @@
+@use "../rules/mixin" as *;
+
+.skills {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-color);
+  .container {
+    
+    .skill-box {
+      display: flex;
+      align-items: center;
+      height: 35px;
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+      .name {
+        width: 200px;
+        text-align: center;
+        padding: 0 15px;
+        font-weight: bold;
+        font-size: 25px;
+        color: white;
+      }
+      .progress {
+          flex: 1;
+          height: 100%;
+          background-color: white;
+          span {
+            display: block;
+            width: 0;
+            height: 100%;
+            background-color: var(--mainColor);
+            transition: var(--mainTransition);
+            position: relative;
+
+            &::after {
+              content: attr(data-progress);
+              position: absolute;
+              top: 50%;
+              right: 5px;
+              transform: translateY(-50%);
+              font-size: 13px;
+              border: 1px solid var(--main-color);
+              padding: 5px;
+              border-radius: 4px;
+              color: var(--main-color);
+              background-color: white;
+              font-weight: bold;
+              transition: var(--mainTransition);
+              opacity: 0;
+            }
+          }
+      }
+    }
+  }
+}
+//use javaScript add this class when scroll {show => opacity span::after} =====> .pseudo
+.progress span.pseudo::after {
+  opacity: 1 !important;
+}
+@include breakpoints(small) {
+  .skills {
+    .container {
+      .skill-box {
+        display: block;
+        height: auto;
+
+        .name {
+          width: 100%;
+          padding: 0;
+          margin-bottom: 10px;
+        }
+        
+        .progress {
+          height: 35px;
+        }
+      }
+    }
+  }
+}

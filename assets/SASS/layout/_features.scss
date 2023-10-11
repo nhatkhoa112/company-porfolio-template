@@ -1,0 +1,71 @@
+@use "../rules/mixin" as *;
+
+.features {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+
+  .container {
+    @include f-between;
+    flex-wrap: wrap;
+
+    .info-box {
+      width: calc((100% / 3) - 10px);
+      margin-bottom: 15px;
+      padding: 30px 10px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 0 8px 0 #607d8b;
+
+      img {
+        width: 200px;
+        height: 200px;
+
+      }
+      h4 {
+        margin: 30px auto;
+        font-size: 27px;
+        font-weight: bold;
+        color: black;
+        position: relative;
+
+        &::after {
+          content: '';
+          background-color: var(--mainColor);
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -15px;
+          height: 5px;
+          width: 50%;
+          border-radius: 50%;
+        }
+      }
+      p {
+        color: var(--textColor);
+        line-height: 1.7;
+
+      }
+    }
+  }
+}
+
+@include breakpoints(medium) {
+  .features {
+    .container {
+      .info-box {
+        width: calc((100% / 2) - 10px);
+      }
+    }
+  }
+
+}
+@include breakpoints(small) {
+  .features {
+    .container {
+      .info-box {
+        width: 100%;
+      }
+    }
+  }
+
+}

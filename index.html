@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kohaku Company</title>
+  <!-- Normalize File -->
+  <link rel="stylesheet" href="./assets/Css/normalize.css">
+  <!-- Css File-->
+  <link rel="stylesheet" href="./assets/Css/main.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./assets/Css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Start Header -->
+  <div class="header">
+    <div class="container">
+      <a href="" class="logo">Kohaku</a>
+      <div class="nav">
+        <!-- JS add Class: show -->
+        <ul class="nav-links" id="nav-links">
+          <!-- JS add Class: active -->
+          <li><a href="" class="active" data-link="landing">Home</a></li>
+          <li><a href=""  data-link="about">About</a></li>
+          <li><a href="" data-link="skills">Skills</a></li>
+          <li><a href="" data-link="gallery">Gallery</a></li>
+          <li><a href="" data-link="timeline">timeline</a></li>
+          <li><a href="" data-link="features">Features </a></li>
+          <li><a href="" data-link="testimonials">testimonials </a></li>
+          <li><a href="" data-link="contact">Contact Us</a></li>
+        </ul>
+        <div class="icon" id="toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Header -->
+  <!-- Start Landing Page -->
+  <div class="landing" id="landing">
+    <div class="intro-text">
+      <h1>Welcome To <span>Kohaku</span>  Company</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptate obcaecati, illo est magnam maiores nemo?</p>
+    </div>
+  </div>
+  <!-- End Landing Page -->
+  <!-- Start Settings Box -->
+  <!-- JS add Class: active-select -->
+  <div class="settings">
+    <div class="icon" id="btn-settings">
+      <i class="fa-solid fa-gear fa-spin"></i>
+    </div>
+    <div class="settings-container">
+      
+      <div class="option-box">
+        <h4>Colors</h4>
+        <ul class="colors-list">
+          <!-- JS add Class: active-color -->
+          <li data-color="#009688" class="active-color"></li>
+          <li data-color="#e91e63"></li>
+          <li data-color="#9c27b0"></li>
+          <li data-color="#3f51b5"></li>
+          <li data-color="#795548"></li>
+          <li data-color="#03a9f4"></li>
+        </ul>
+      </div>
+
+      <div class="option-box">
+        <h4>Random Background</h4>
+        <div class="random-bg">
+          <!-- JS add Class: active-select -->
+          <span class="yes">Yes</span>
+          <span class="no active-select">No</span>
+        </div>
+      </div>
+
+      <div class="option-box">
+        <h4>NavBar Fixed</h4>
+        <div class="nav-op">
+          <!-- JS add Class: active-select -->
+          <span class="yes">Yes</span>
+          <span class="no active-select">No</span>
+        </div>
+      </div>
+
+      <div class="option-box">
+        <h4>Rest Settings</h4>
+        <!-- JS add Class: active-select -->
+        <span class="rest">Rest</span>
+      </div>
+
+    </div>
+  </div>
+  <!-- Start button Scroll To top -->
+  <span class="go-top">
+    <i class="fa-solid fa-angles-up"></i>
+  </span>
+  <!-- End button Scroll To top -->
+  <!-- End Settings Box -->
+  <!-- Start About us -->
+  <div class="about-us" id="about">
+    <div class="container">
+      <div class="text-content">
+        <h2>About US</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia reiciendis autem consequatur doloribus quasi hic. Officiis aperiam atque qui, doloribus maxime quae. Voluptatem assumenda, maxime impedit unde dolores molestiae ex.</p>
+      </div>
+      <div class="image-box">
+        <img src="./assets/images/about.jpg" alt="coding">
+      </div>
+    </div>
+  </div>
+  <!-- End About us -->
+  <!-- Start Skills -->
+  <!-- JS change width span to data-progress -->
+  <div class="skills" id="skills">
+    <h2 class="main-header">My Skills</h2>
+    <div class="container">
+      <div class="skill-box">
+        <div class="name">HTML</div>
+        <div class="progress">
+          <span data-progress="70%"></span>
+        </div>
+      </div>
+      <div class="skill-box">
+        <div class="name">CSS</div>
+        <div class="progress">
+          <span data-progress="80%"></span>
+        </div>
+      </div>
+      <div class="skill-box">
+        <div class="name">JavaScript</div>
+        <div class="progress">
+          <span data-progress="90%"></span>
+        </div>
+      </div>
+      <div class="skill-box">
+        <div class="name">React</div>
+        <div class="progress">
+          <span data-progress="70%"></span>
+        </div>
+      </div>
+      <div class="skill-box">
+        <div class="name">php</div>
+        <div class="progress">
+          <span data-progress="75%"></span>
+        </div>
+      </div>
+      <div class="skill-box">
+        <div class="name">MySQl</div>
+        <div class="progress">
+          <span data-progress="90%"></span>
+        </div>
+      </div>
+      <div class="skill-box">
+        <div class="name">Node.Js</div>
+        <div class="progress">
+          <span data-progress="75%"></span>
+        </div>
+      </div>
+      <div class="skill-box">
+        <div class="name">MongoDB</div>
+        <div class="progress">
+          <span data-progress="80%"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Skills -->
+  <!-- Start Gallery -->
+  <!-- JS change add overylay & Popup Box append img Clicked-->
+  <div class="gallery" id="gallery">
+    <h2 class="main-header">Our Gallery</h2>
+    <div class="container">
+      <div class="images-box">
+        <img src="./assets/images/01.jpg" alt="">
+        <img src="./assets/images/02.jpg" alt="">
+        <img src="./assets/images/03.webp" alt="">
+        <img src="./assets/images/04.jpg" alt="">
+        <img src="./assets/images/05.webp" alt="">
+        <img src="./assets/images/06.jpg" alt="">
+        <img src="./assets/images/07.jpg" alt="">
+        <img src="./assets/images/08.webp" alt="">
+        <img src="./assets/images/09.png" alt="">
+      </div>
+    </div>
+  </div>
+  <!-- End Gallery -->
+  <!-- Start Timeline -->
+  <div class="timeline" id="timeline">
+    <div class="container">
+      <div class="timeline-content">
+        <div class="year">2019</div>
+        <div class="left">
+          <div class="content">
+            <h3>Testing</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, incidunt!</p>
+          </div>
+        </div>
+        <div class="rigth">
+          <div class="content">
+            <h3>Testing</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, incidunt!</p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-content">
+        <div class="year">2020</div>
+        <div class="left">
+          <div class="content">
+            <h3>Testing</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, incidunt!</p>
+          </div>
+        </div>
+        <div class="rigth">
+          <div class="content">
+            <h3>Testing</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, incidunt!</p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-content">
+        <div class="year">2021</div>
+        <div class="left">
+          <div class="content">
+            <h3>Testing</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, incidunt!</p>
+          </div>
+        </div>
+        <div class="rigth">
+          <div class="content">
+            <h3>Testing</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, incidunt!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Timeline -->
+  <!-- Start Our Features -->
+  <div class="features" id="features">
+    <h2 class="main-header">Our Features</h2>
+    <div class="container">
+
+      <div class="info-box">
+        <img src="./assets/images/icone 01.png" alt="">
+        <h4>Developer</h4>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, aut?</p>
+      </div>
+
+      <div class="info-box">
+        <img src="./assets/images/icone 02.png" alt="">
+        <h4>Developer</h4>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, aut?</p>
+      </div>
+
+      <div class="info-box">
+        <img src="./assets/images/icone 03.png" alt="">
+        <h4>Developer</h4>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, aut?</p>
+      </div>
+
+      <div class="info-box">
+        <img src="./assets/images/icone 04.png" alt="">
+        <h4>Developer</h4>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, aut?</p>
+      </div>
+
+      <div class="info-box">
+        <img src="./assets/images/icone 05.png" alt="">
+        <h4>Developer</h4>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, aut?</p>
+      </div>
+
+      <div class="info-box">
+        <img src="./assets/images/icone 06.png" alt="">
+        <h4>Developer</h4>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, aut?</p>
+      </div>
+
+      <div class="info-box">
+        <img src="./assets/images/icone 07.png" alt="">
+        <h4>Developer</h4>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, aut?</p>
+      </div>
+
+      <div class="info-box">
+        <img src="./assets/images/icone 08.png" alt="">
+        <h4>Developer</h4>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, aut?</p>
+      </div>
+
+      <div class="info-box">
+        <img src="./assets/images/icone 09.png" alt="">
+        <h4>Developer</h4>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, aut?</p>
+      </div>
+
+    </div>
+  </div>
+  <!-- End Our Features -->
+  <!-- Start Testimonials -->
+  <div class="testimonials" id="testimonials">
+    <h2 class="main-header">Testimonials</h2> 
+    <div class="container">
+
+      <div class="ts-box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quibusdam est illum nemo beatae?</p>
+        <div class="info">
+          <img src="./assets/images/icone 02.png" alt="">
+          <div class="person">
+            <h4>Koha</h4>
+            <p>Kohaku Company</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quibusdam est illum nemo beatae?</p>
+        <div class="info">
+          <img src="./assets/images/icone 03.png" alt="">
+          <div class="person">
+            <h4>Koha</h4>
+            <p>Kohaku Company</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quibusdam est illum nemo beatae?</p>
+        <div class="info">
+          <img src="./assets/images/icone 04.png" alt="">
+          <div class="person">
+            <h4>Koha</h4>
+            <p>Kohaku Company</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quibusdam est illum nemo beatae?</p>
+        <div class="info">
+          <img src="./assets/images/icone 05.png" alt="">
+          <div class="person">
+            <h4>Koha</h4>
+            <p>Kohaku Company</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quibusdam est illum nemo beatae?</p>
+        <div class="info">
+          <img src="./assets/images/icone 06.png" alt="">
+          <div class="person">
+            <h4>Koha</h4>
+            <p>Kohaku Company</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quibusdam est illum nemo beatae?</p>
+        <div class="info">
+          <img src="./assets/images/icone 07.png" alt="">
+          <div class="person">
+            <h4>Koha</h4>
+            <p>Kohaku Company</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- End Testimonials -->
+  <!-- Start Contact Us -->
+  <div class="contact-us" id="contact">
+    <h2 class="main-header">Contact Us</h2>
+    <div class="container">
+      <form action="/" method="GET">
+        <div class="box">
+          <input type="text" placeholder="Your Name" name="username">
+          <input type="text" placeholder="phone" name="phone">
+          <input type="email" placeholder="Your Email" name="email" >
+          <input type="text" placeholder="subject" name="subject">
+        </div>
+
+        <div class="box-sub">
+          <textarea placeholder="Enter Your Massage" name="textarea"></textarea>
+          <input type="submit" value="Send" >
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <!-- End Contact Us -->
+  <!-- Start Footer -->
+  <div class="footer">
+    <div class="container">
+      <p>Complete This Template By <a href="https://www.linkedin.com/in/ahmedsamyop/" target="_blank">Koha</a> &copy;</p>
+    </div>
+  </div>
+  <!-- End Footer -->
+
+
+
+  <script src="./assets/Js/all.min.js"></script>
+  <script src="./assets/Js/app.js"></script>
+</body>
+</html>

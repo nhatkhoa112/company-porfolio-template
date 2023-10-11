@@ -1,0 +1,165 @@
+@use "../rules/mixin" as *;
+
+.timeline {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-color);
+  
+  .container {
+    
+    .timeline-content {
+      position: relative;
+      overflow: hidden;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+
+      &::before {
+        content: '';
+        @include p-center;
+        width: 3px;
+        height: 100%;
+        background-color: var(--mainColor);
+      }
+
+      .year {
+        width: fit-content;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        margin: 20px 0;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        border-radius: 8px; 
+        transform: translate(-50%, -50%);
+        background-color: var(--mainColor);
+        padding: 10px;
+
+      }
+      .left, .rigth {
+        // counter-increment: num;
+        width: calc(50% - 30px);
+        position: relative;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 8px 0 white;
+        margin: 20px 0;
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--section-color);
+        }
+
+      
+        &::before {
+          // content: counter(num);
+          content: '';
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-color: white;
+          border: 3px solid var(--mainColor);
+          border-radius: 50%;
+          top: 50%;
+          transform: translateY(-50%);
+
+       
+  
+        
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          border: 10px solid;
+          top: 50%;
+          transform: translateY(-50%);
+
+        }
+
+        .content {
+          padding: 20px 10px;
+          border-radius: 8px;
+          position: relative;
+
+
+          h3 {
+            margin-bottom: 20px;
+
+          }
+          p {
+            line-height: 1.6;
+            color: var(--textColor);
+
+          }
+        }
+      }
+      .left {
+
+        &::before {
+          right: -43px;
+        }
+
+        &::after {
+          border-color: transparent transparent transparent white;
+          right: -20px;
+
+        }
+        
+      }
+      .rigth {
+        align-self: flex-end;
+        &::before {
+          left: -43px;
+        }
+
+        &::after {
+          border-color: transparent white transparent transparent;
+          left: -20px;
+
+        }
+        
+      }
+    }
+  }
+}
+
+
+// Media Query .....
+
+@include breakpoints(small) {
+  .timeline {
+    .container {
+      .timeline-content {
+        
+        &::before {
+          left: 50px;
+        }
+        .year {
+          left: 40px;
+          top: 0;
+          transform: translate(-50%, -50%);
+        }
+        .left, .rigth {
+          width: calc(100% - 70px);
+          
+        }
+        .left {
+          align-self: flex-end;
+          &::before {
+            left: -43px;
+          }
+  
+          &::after {
+            border-color: transparent white transparent transparent;
+            left: -20px;
+            right: auto;
+          }
+          
+        }
+      }
+    }
+  }
+
+}

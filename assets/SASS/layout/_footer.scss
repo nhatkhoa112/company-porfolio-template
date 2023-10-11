@@ -1,0 +1,20 @@
+@use "../rules/mixin" as *;
+
+
+.footer {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-color);
+  .container {
+    text-align: center;
+    p {
+      font-size: 20px;
+      color: white;
+      line-height: 1.6;
+      a {
+        font-weight: bold;
+        color: var(--mainColor);
+      }
+    }
+  }
+}

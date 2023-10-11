@@ -1,0 +1,40 @@
+@use "../rules/mixin" as *;
+
+.landing {
+  min-height: 100vh;
+  background-image: url("../images/09.png");
+  background-size: cover;
+  position: relative;
+  transition: background-image var(--mainTransition);
+  .intro-text {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    @include p-center;
+    z-index: 2;
+    color: white;
+    h1 {
+      font-size: 50px;
+      margin-bottom: 15px;
+      span {
+        color: var(--mainColor);
+      }
+    }
+    p {
+      font-size: 18px;
+      color: var(--textColor);
+    }
+  }
+  &::after {
+    content: '';
+    @include overlay(black, 0.8);
+    z-index: 1;
+  }
+}
+@include breakpoints(small) {
+  .landing {
+    .intro-text {
+      width: 100%;
+    }
+  }
+}
